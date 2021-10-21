@@ -18,6 +18,8 @@
             <%for (let plant of plants){ %>
                 <div class="plant-card">
                     <a href="/plants/<%=plant._id%>"><h2><%=plant.commonName%></h2></a>
+                    <a href="/plants/<%=plant._id%>"><img src="<%=plant.photo%>" alt="<%=plant.commonName%>"/></a>
+                    <!-- edit button -->
                 </div>
             <%}%>
         </div>

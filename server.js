@@ -4,7 +4,7 @@
 const express = require('express');
 const methodOverride  = require('method-override');
 const mongoose = require ('mongoose');
-const app = express ();
+const app = express();
 const db = mongoose.connection;
 require('dotenv').config()
 //___________________
@@ -43,13 +43,16 @@ app.use(express.json());// returns middleware that only parses JSON - may or may
 //use method override
 app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 
-
+// Controllers
+const plantsController = require('./controllers/plants_controller.js')
+app.use('/plants', plantsController)
 //___________________
 // Routes
 //___________________
 //localhost:3000
 app.get('/' , (req, res) => {
-  res.send('Hello World!');
+  // res.send('Hello World!');
+  res.redirect('/plants')
 });
 
 //___________________

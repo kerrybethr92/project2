@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title><%=plant.commonName%></title>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="/plants">Home</a></li>
+                <li><a href="/plants/new">Log a new plant</a></li>
+            </ul>
+        </nav>
+        <div class="show-container">
+            <div class="show-left">
+                <img src="<%=plant.photo%>" alt="<%=plant.commonName%>">
+                <button type="button" name="button"><a href="/plants/<%=plant._id%>/edit">EDIT</a></button>
+                <form action="/plants/<%=plant._id%>?_method=DELETE" method="POST">
+                    <input type="submit" value="DELETE">
+                </form>
+            </div>
+            <div class="show-right">
+                <h2><%=plant.commonName%></h2>
+                <h3><%=plant.scientificName%></h3>
+                <h4>received: <%=plant.dateAcquired%></h4>
+                <h4>light requirements: <%=plant.light%></h4>
+                <h4>last watered: <%=plant.lastWatered%></h4>
+                <ul>
+                    notes:
+                    <%for (let i = 0; i < plant.notes.length; i++) {%>
+                        <li><%=plant.notes[i]%></li>
+                    <%}%>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>

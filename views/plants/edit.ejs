@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Edit a Plant</title>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="/plants">Home</a></li>
+                <li><a href="/plants/new">Log a new plant</a></li>
+            </ul>
+        </nav>
+        <h2>Edit a plant in your collection</h2>
+        <form action="/plants/<%=plant._id%>?_method=PUT" method="POST">
+            <label for="commonName">Common Name:</label>
+            <input type="text" name="commonName" value="<%=plant.commonName%>" /><br/>
+            <label for="photo">Image URL:</label>
+            <input type="text" name="photo" value="<%=plant.photo%>"/><br/>
+            <label for="scientificName">Scientific Name:</label>
+            <input type="text" name="scientificName" value="<%=plant.scientificName%>"/><br/>
+            <label for="light">Light Requirment:</label>
+            <input type="text" name="light" value="<%=plant.light%>"/><br/>
+            <label for="dateAcquired">Date Received:</label>
+            <input type="date" name="dateAcquired" value="<%=plant.dateAcquired%>"/><br/>
+            <label for="lastWatered">last watered:</label>
+            <input type="date" name="lastWatered" value="<%=plant.lastWatered%>"/><br/>
+            <label for="notes">Notes (separate using '/')</label>
+            <input type="textarea" name="notes" value="<%=plant.notes%>"/><br/>
+            <!-- the req.body.notes will need to be handled -->
+            <input type="submit" value="Submit"/>
+        </form>
+    </body>
+</html>
