@@ -8,12 +8,7 @@
         <header>
             Welcome to the Jungle
         </header>
-        <nav>
-            <ul>
-                <li><a href="/plants">Home</a></li>
-                <li><a href="/plants/new">Log a new plant</a></li>
-            </ul>
-        </nav>
+        <%- include ('../partials/nav.ejs') %>
         <div class="container">
             <%for (let plant of plants){ %>
                 <div class="plant-card">

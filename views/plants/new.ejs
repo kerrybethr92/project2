@@ -5,12 +5,7 @@
         <title>Log New Plant</title>
     </head>
     <body>
-        <nav>
-            <ul>
-                <li><a href="/plants">Home</a></li>
-                <li><a href="/plants/new">Log a new plant</a></li>
-            </ul>
-        </nav>
+        <%- include ('../partials/nav.ejs') %>
         <h2>Log a new plant in your collection</h2>
         <form action="/plants" method="POST">
             <label for="commonName">Common Name:</label>

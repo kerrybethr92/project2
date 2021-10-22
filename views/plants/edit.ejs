@@ -5,12 +5,7 @@
         <title>Edit a Plant</title>
     </head>
     <body>
-        <nav>
-            <ul>
-                <li><a href="/plants">Home</a></li>
-                <li><a href="/plants/new">Log a new plant</a></li>
-            </ul>
-        </nav>
+        <%- include ('../partials/nav.ejs') %>
         <h2>Edit a plant in your collection</h2>
         <form action="/plants/<%=plant._id%>?_method=PUT" method="POST">
             <label for="commonName">Common Name:</label>

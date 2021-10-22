@@ -5,12 +5,7 @@
         <title><%=plant.commonName%></title>
     </head>
     <body>
-        <nav>
-            <ul>
-                <li><a href="/plants">Home</a></li>
-                <li><a href="/plants/new">Log a new plant</a></li>
-            </ul>
-        </nav>
+        <%- include ('../partials/nav.ejs') %>
         <div class="show-container">
             <div class="show-left">
                 <img src="<%=plant.photo%>" alt="<%=plant.commonName%>">
