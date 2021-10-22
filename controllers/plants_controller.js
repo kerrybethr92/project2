@@ -4,7 +4,7 @@ const plants = express.Router()
 
 // NEW Route
 plants.get('/new', (req, res) => {
-    res.render('plants/new.ejs')
+    res.render('plants/new.ejs', {currentUser: req.session.currentUser})
 })
 // CREATE
 plants.post('/', (req, res) => {
@@ -18,7 +18,8 @@ plants.post('/', (req, res) => {
 plants.get('/:id', (req, res) => {
     Plant.findById(req.params.id, (error, foundPlant) => {
         res.render('plants/show.ejs', {
-            plant: foundPlant
+            plant: foundPlant,
+            currentUser: req.session.currentUser
         })
     })
 })
@@ -27,7 +28,8 @@ plants.get('/:id', (req, res) => {
 plants.get('/:id/edit', (req, res) => {
     Plant.findById(req.params.id, (error, foundPlant) => {
         res.render('plants/edit.ejs', {
-            plant: foundPlant
+            plant: foundPlant,
+            currentUser: req.session.currentUser
         })
     })
 })
@@ -55,7 +57,8 @@ plants.get('/', (req, res) => {
     Plant.find({}, (error, allPlants) => {
         // should this maybe be '../views/plants/index.ejs' ?
         res.render('../views/plants/index.ejs', {
-            plants: allPlants
+            plants: allPlants,
+            currentUser: req.session.currentUser
         })
     })
 })
