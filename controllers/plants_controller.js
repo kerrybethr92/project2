@@ -2,8 +2,16 @@ const express = require('express')
 const Plant = require('../models/plants.js')
 const plants = express.Router()
 
-// NEW Route
-plants.get('/new', (req, res) => {
+// middleware that restricts certain functionality to logged in user
+const isAuthenticated = (req, res, next) => {
+    if (req.session.currentUser) {
+        return next()
+    } else {
+        res.redirect('/sessions/new')
+    }
+}
+// NEW plant Route
+plants.get('/new', isAuthenticated, (req, res) => {
     res.render('plants/new.ejs', {currentUser: req.session.currentUser})
 })
 // CREATE

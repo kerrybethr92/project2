@@ -1,0 +1,29 @@
+body {
+    background-color: #9fdfbf;
+}
+
+.plant-card {
+    background-color: #ffcccc;
+    border: solid #ff8080 1px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    /* need to center */
+}
+
+.plant-card img {
+    width: inherit;
+}
+
+.show-container {
+
+}
+
+.show-left {
+
+}
+
+.show-right {
+    
+}

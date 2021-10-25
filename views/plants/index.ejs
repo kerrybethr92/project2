@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>Plants Index</title>
-    </head>
+    <%- include ('../partials/head.ejs') %>
     <body>
         <header>
             Welcome to the Jungle
@@ -14,7 +11,7 @@
                 <div class="plant-card">
                     <a href="/plants/<%=plant._id%>"><h2><%=plant.commonName%></h2></a>
                     <a href="/plants/<%=plant._id%>"><img src="<%=plant.photo%>" alt="<%=plant.commonName%>"/></a>
-                    <!-- edit button -->
+                    <button type="button" name="button"><a href="/plants/<%=plant._id%>/edit">EDIT</a></button>
                 </div>
             <%}%>
         </div>
