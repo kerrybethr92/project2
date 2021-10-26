@@ -1,17 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-      <meta charset="utf-8">
-      <title>New User</title>
-  </head>
+  <%- include ('../partials/head.ejs') %>
   <body>
-      <nav>
-          <ul>
-              <li><a href="/plants">Home</a></li>
-              <li><a href="/plants/new">Log a new plant</a></li>
-          </ul>
-      </nav>
-    <div class="container">
+      <%- include ('../partials/nav.ejs') %>
+      <%- include ('../partials/header.ejs') %>
+    <div class="sign-up">
       <h1>New User</h1>
       <form action="/users" method="POST">
         <label for="name">User Name:</label>
@@ -22,5 +15,6 @@
         <input type="submit" value="Submit">
       <form>
     </div>
+    <%- include ('../partials/footer.ejs') %>
   </body>
 </html>
