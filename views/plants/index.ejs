@@ -2,11 +2,9 @@
 <html lang="en" dir="ltr">
     <%- include ('../partials/head.ejs') %>
     <body>
-        <header>
-            Welcome to the Jungle
-        </header>
         <%- include ('../partials/nav.ejs') %>
-        <div class="container">
+        <%- include ('../partials/header.ejs') %>
+        <div class="index-container">
             <%for (let plant of plants){ %>
                 <div class="plant-card">
                     <a href="/plants/<%=plant._id%>"><h2><%=plant.commonName%></h2></a>
@@ -15,5 +13,6 @@
                 </div>
             <%}%>
         </div>
+        <%- include ('../partials/footer.ejs') %>
     </body>
 </html>

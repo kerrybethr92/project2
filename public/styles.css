@@ -1,29 +1,107 @@
 body {
-    background-color: #9fdfbf;
+    background-color: #612B2A;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+/* [[[[[[[[[[[[[ HEADER ]]]]]]]]]]]]] */
+header {
+    text-align: center;
+    background-color: #E6A9A8;
+    padding: 8px 0 8px 0;
+}
+header h1 {
+    font-family: 'Metal Mania', cursive;
+    color: #AD4C4A;
+    margin: 0;
+}
+header h3 {
+    font-family: 'Dancing Script', cursive;
+    color: #614747;
+    margin: 0;
+}
+/* [[[[[[[[[[[[[[ NAV ]]]]]]]]]]]]]] */
+nav {
+    display: flex;
+    justify-content: flex-end;
+}
+nav ul {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    list-style: none;
+}
+nav li {
+    font-family: 'Dancing Script', cursive;
+    margin-right: 1em;
+}
+nav li a {
+    color: #E6A9A8;
+}
+/* [[[[[[[[[ FOOTER ]]]]]]]]] */
+footer a {
+    color: #E6A9A8;
+}
+
+/* [[[[[[[[[[[[[[ INDEX VIEW ]]]]]]]]]]]]]] */
+.index-container {
+    display: flex;
+    flex-direction: row;
 }
 
 .plant-card {
-    background-color: #ffcccc;
-    border: solid #ff8080 1px;
+    background-color: #E6A9A8;
+    border: solid #E06360 1px;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
     width: 20vw;
-    /* need to center */
+    align-items: center;
+    margin: 5px;
 }
 
 .plant-card img {
-    width: inherit;
+    width: 18vw;
+}
+.plant-card h2 {
+    font-family: 'Metal Mania', cursive;
+    color: #AD4C4A;
 }
 
+/* [[[[[[[[[[ SHOW VIEW ]]]]]]]]]] */
 .show-container {
-
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .show-left {
-
+    width: 45vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
-
+.show-left img {
+    width: inherit;
+    border-radius: 4px;
+}
 .show-right {
-    
+    background-color: #E6A9A8;
+    width: 45vw;
+    border-radius: 4px;
+    padding: 8px;
 }
+.show-right h2 {
+    font-family: 'Metal Mania', cursive;
+    color: #AD4C4A;
+}
+
+/* [[[[[[[[[ NEW PLANT ]]]]]]]]] */
+
+/* [[[[[[[[[ EDIT PLANT ]]]]]]]]] */
+
+/* [[[[[[[[[ SIGN UP ]]]]]]]]] */
+
+/* [[[[[[[[[ LOG IN ]]]]]]]]] */
