@@ -1,5 +1,6 @@
 const express = require('express')
 const Plant = require('../models/plants.js')
+const Wishlist = require('../models/wishlist.js')
 const plants = express.Router()
 
 // middleware that restricts certain functionality to logged in user
@@ -10,6 +11,32 @@ const isAuthenticated = (req, res, next) => {
         res.redirect('/sessions/new')
     }
 }
+// CREATE wishlist plant
+plants.post('/wishlist/', (req, res) => {
+    Wishlist.create(req.body, (error, createdWishlistPlant) => {
+        res.redirect('/plants/wishlist')
+    })
+})
+// new wishlist plant
+plants.get('/wishlist/new', isAuthenticated, (req, res) => {
+    res.render('plants/newW.ejs', {currentUser: req.session.currentUser})
+})
+// delete from wishlist
+plants.delete('/wishlist/:id', (req, res) => {
+    Wishlist.findByIdAndRemove(req.params.id, (err, deletedPlant) => {
+        res.redirect('/plants/wishlist')
+    })
+})
+// WISHLIST route
+plants.get('/wishlist', (req, res) => {
+    Wishlist.find({}, (error, allWishlist) => {
+        res.render('plants/wishlist.ejs', {
+            wishlist: allWishlist,
+            currentUser: req.session.currentUser
+        })
+    })
+})
+
 // NEW plant Route
 plants.get('/new', isAuthenticated, (req, res) => {
     res.render('plants/new.ejs', {currentUser: req.session.currentUser})

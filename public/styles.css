@@ -72,6 +72,10 @@ footer a {
     font-family: 'Metal Mania', cursive;
     color: #AD4C4A;
 }
+.plant-card h3 {
+    font-family: 'Dancing Script', cursive;
+    color: #AD4C4A;
+}
 
 /* [[[[[[[[[[ SHOW VIEW ]]]]]]]]]] */
 .show-container {
@@ -155,4 +159,16 @@ footer a {
     margin-left: auto;
     margin-right: auto;
     width: 40%;
+}
+
+#wishlist {
+    font-family: 'Metal Mania', cursive;
+    color: #F9C7C9;
+}
+#newWishlist {
+    font-family: 'Dancing Script', cursive;
+    color: #F9C7C9;
+}
+.wishlist-container {
+    margin-left: 10px;
 }

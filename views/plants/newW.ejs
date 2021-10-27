@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <%- include ('../partials/head.ejs') %>
+    <body>
+        <%- include ('../partials/nav.ejs') %>
+        <%- include ('../partials/header.ejs') %>
+        <div class="new-plant">
+            <h2>Add a new plant to your wishlist</h2>
+            <form action="/plants/wishlist" method="POST">
+                <label for="commonName">Common Name:</label>
+                <input type="text" name="commonName" required /><br/>
+                <label for="photo">Image URL:</label>
+                <input type="text" name="photo" /><br/>
+                <label for="scientificName">Scientific Name:</label>
+                <input type="text" name="scientificName" /><br/>
+                <input type="submit" value="Submit"/>
+            </form>
+        </div>
+        <%- include ('../partials/footer.ejs') %>
+    </body>
+</html>

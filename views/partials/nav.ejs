@@ -4,6 +4,7 @@
         <li><a href="/plants/new">Log a new plant</a></li>
         <% if (currentUser) { %>
             <li>Hello, <%=currentUser.username%></li>
+            <li><a href="/plants/wishlist">wishlist</a></li>
             <li>
                 <form action="/sessions?_method=DELETE" method="POST">
                     <input type="submit" value="Log Out">
