@@ -9,7 +9,7 @@ a {
 /* [[[[[[[[[[[[[ HEADER ]]]]]]]]]]]]] */
 header {
     text-align: center;
-    background-color: #E6A9A8;
+    background-color: #F9C7C9;
     padding: 8px 0 8px 0;
     margin-bottom: 10px;
 }
@@ -37,14 +37,14 @@ nav ul {
 nav li {
     font-family: 'Dancing Script', cursive;
     margin-right: 1em;
-    color: #E6A9A8;
+    color: #F9C7C9;
 }
 nav li a {
-    color: #E6A9A8;
+    color: #F9C7C9;
 }
 /* [[[[[[[[[ FOOTER ]]]]]]]]] */
 footer a {
-    color: #E6A9A8;
+    color: #F9C7C9;
 }
 
 /* [[[[[[[[[[[[[[ INDEX VIEW ]]]]]]]]]]]]]] */
@@ -55,7 +55,7 @@ footer a {
 }
 
 .plant-card {
-    background-color: #E6A9A8;
+    background-color: #F9C7C9;
     border: solid #E06360 1px;
     border-radius: 8px;
     display: flex;
@@ -90,10 +90,10 @@ footer a {
 .show-left img {
     width: inherit;
     border-radius: 4px;
-    border: 5px solid #E6A9A8;
+    border: 5px solid #F9C7C9;
 }
 .show-right {
-    background-color: #E6A9A8;
+    background-color: #F9C7C9;
     width: 45vw;
     border-radius: 4px;
 }
@@ -120,7 +120,7 @@ footer a {
 
 /* [[[[[[[[[ NEW PLANT ]]]]]]]]] */
 .new-plant {
-    color: #E6A9A8;
+    color: #F9C7C9;
 }
 .new-plant h2 {
     font-family: 'Metal Mania', cursive;
@@ -130,7 +130,7 @@ footer a {
 }
 /* [[[[[[[[[ EDIT PLANT ]]]]]]]]] */
 .edit-plant {
-    color: #E6A9A8;
+    color: #F9C7C9;
 }
 .edit-plant h2 {
     font-family: 'Metal Mania', cursive;
@@ -141,7 +141,7 @@ footer a {
 /* [[[[[[[[[ SIGN UP ]]]]]]]]] */
 .sign-up {
     font-family: 'Metal Mania', cursive;
-    color: #E6A9A8;
+    color: #F9C7C9;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -150,7 +150,7 @@ footer a {
 /* [[[[[[[[[ LOG IN ]]]]]]]]] */
 .log-in {
     font-family: 'Metal Mania', cursive;
-    color: #E6A9A8;
+    color: #F9C7C9;
     display: block;
     margin-left: auto;
     margin-right: auto;
